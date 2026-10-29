@@ -28,6 +28,8 @@ These are easy to miss by eye and impossible to miss with a checklist.
 | `scripts/qc_article.py` | Automated QA (17 rules, stdlib only) |
 | `scripts/publish_checklist.py` | Publish-risk word scan |
 | `tests/` | 3 unittest cases |
+
+> Scripts use the standard library only; Python 3.10+ (CI covers 3.10/3.11/3.12).
 | `examples/` | A passing sample article and images |
 
 ## Usage

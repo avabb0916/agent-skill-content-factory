@@ -28,6 +28,8 @@
 | `scripts/qc_article.py` | 质检自动版（17 条规则，只依赖标准库） |
 | `scripts/publish_checklist.py` | 发布风险词检查 |
 | `tests/` | unittest 用例（3 个，跑 `python3 -m unittest discover -s tests`） |
+
+> 脚本只依赖标准库，Python 3.10+ 即可（CI 覆盖 3.10/3.11/3.12）。
 | `examples/` | 一篇合格示例 + 示例图 |
 
 ## 怎么用
