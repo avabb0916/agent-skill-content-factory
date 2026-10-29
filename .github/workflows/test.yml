@@ -1,0 +1,29 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  qc-scripts:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.9', '3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Check the passing example (should exit 0)
+        run: python scripts/qc_article.py examples/good-article.md
+      - name: Check a bad article (should exit 1)
+        run: |
+          if python scripts/qc_article.py tests/fixtures/bad.md; then
+            echo "expected failure but got success"; exit 1
+          else
+            echo "correctly rejected"
+          fi
