@@ -78,6 +78,7 @@ python3 -m unittest discover -s tests
 |---|---|
 | [x-article-factory](https://github.com/avabb0916/x-article-factory) | 同一套规则的 JS 实现 + 本地配图生成（`xaf check`） |
 | [x-md-publisher](https://github.com/avabb0916/x-md-publisher) | 把 Markdown 发成 X 文章草稿（`xpub`） |
+| [md2substack](https://github.com/avabb0916/md2substack) | Markdown → Substack 草稿 |
 | [md2wechat](https://github.com/avabb0916/md2wechat) | 把 Markdown 发成公众号草稿（`md2wechat`） |
 | [x-article-template](https://github.com/avabb0916/x-article-template) | 开箱即用的内容仓库模板（含 CI 检查） |
 
